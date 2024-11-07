@@ -1,0 +1,174 @@
+/* Body Styling */
+body {
+    font-family: 'Helvetica Neue', sans-serif;
+   
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-image: url("../image/b3.png"); /* Use url() to include the image */
+    background-size: cover; /* Adjusts the image to cover the entire background */
+    background-position: center; /* Centers the image */
+}
+
+/* Container Styling with Enhanced Glassmorphism Effect */
+.container {
+    max-width: 500px;
+    width: 100%; /* Ensures responsiveness */
+    min-height: 600px; /* Increased minimum height */
+    margin: 60px auto;
+    background: rgba(255, 255, 255, 0.15);
+    padding: 40px;
+    border-radius: 15px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+    backdrop-filter: blur(10px); /* Frosted glass effect */
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start; /* Adjusted for better alignment */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.container:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.4);
+}
+
+/* Additional Styling */
+
+
+
+/* Heading Styling */
+h1 {
+    text-align: center;
+    color: #ffffff;
+    font-size: 28px;
+    margin-bottom: 25px;
+    letter-spacing: 1.2px;
+    font-weight: 600;
+}
+
+/* Form Group Styling */
+.form-group {
+    margin-bottom: 20px;
+}
+
+label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 8px;
+    color: #fff;
+    font-size: 16px;
+}
+
+/* Input and Select Styling */
+input[type="text"],
+input[type="email"],
+input[type="file"],
+select {
+    width: 100%;
+    padding: 15px;
+    border: none;
+    border-radius: 8px;
+    background-color: rgba(255, 255, 255, 0.1);
+    color: #000000;
+    font-size: 16px;
+    transition: background-color 0.3s, box-shadow 0.3s;
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+select:focus {
+    background-color: rgba(255, 255, 255, 0.2);
+    box-shadow: 0 0 5px rgba(255, 255, 255, 0.5);
+    outline: none;
+}
+
+/* Button Styling */
+button {
+    display: block;
+    width: 100%;
+    padding: 15px;
+    background-image: linear-gradient(135deg, #3498db, #1abc9c);
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+button:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(26, 188, 156, 0.5);
+}
+
+/* Avatar Preview Styling */
+.avatar-preview img {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    margin-bottom: 15px;
+    border: 3px solid #fff;
+    transition: transform 0.3s ease;
+}
+
+.avatar-preview img:hover {
+    transform: scale(1.1);
+}
+
+/* Success Message Styling */
+.success-message {
+    background-color: rgba(144, 238, 144, 0.3);
+    color: #ffffff;
+    padding: 20px;
+    margin: 25px 0;
+    border-radius: 8px;
+    border: 1px solid rgba(144, 238, 144, 0.5);
+    font-size: 20px;
+    text-align: center;
+}
+
+/* Message Box Styling */
+.message-box {
+    max-width: 500px;
+    background: rgba(255, 255, 255, 0.15);
+    padding: 25px;
+    border-radius: 15px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    font-family: 'Helvetica Neue', sans-serif;
+}
+
+.message-box.success {
+    background-color: rgba(212, 237, 218, 0.15);
+    border: 1px solid rgba(195, 230, 203, 0.5);
+    color: #00bbff;
+}
+
+.message-box.error {
+    background-color: rgba(248, 215, 218, 0.15);
+    border: 1px solid rgba(245, 198, 203, 0.5);
+    color: #721c24;
+}
+
+/* Message Box Link Styling */
+.message-box a {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 12px 25px;
+    background-image: linear-gradient(135deg, #3498db, #2980b9);
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+    border-radius: 8px;
+    transition: transform 0.3s ease;
+}
+
+.message-box a:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(52, 152, 219, 0.4);
+}

@@ -1,0 +1,143 @@
+body {
+    font-family: 'Verdana', sans-serif;
+    background-image: url("../image/b3.png"); /* Use url() to include the image */
+    background-size: cover; /* Adjusts the image to cover the entire background */
+    background-position: center; /* Centers the image */
+    color: #444;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Center content vertically */
+}
+
+.container {
+    max-width: 600px;
+    width: 100%; /* Ensure responsiveness */
+    margin: 60px auto;
+    background: linear-gradient(to bottom right, #ffffff, #f0f4f8);
+    padding: 40px;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+    border: 1px solid #ddd;
+    position: relative; /* Allow pseudo-elements */
+    overflow: hidden; /* Hide overflow for pseudo-elements */
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 25px;
+    color: #2c3e50;
+    font-size: 2.2em;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+/* Styling for form groups */
+.form-group {
+    margin-bottom: 20px;
+}
+
+/* Styling for labels */
+label {
+    display: block;
+    font-weight: 600;
+    margin-bottom: 8px;
+    font-size: 1.1em;
+}
+
+/* Input field styles */
+input[type="text"],
+input[type="email"],
+input[type="file"],
+select {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #bbb;
+    border-radius: 6px;
+    font-size: 1em;
+    transition: border-color 0.3s;
+}
+
+/* Focus states for inputs */
+input[type="text"]:focus,
+input[type="email"]:focus,
+select:focus {
+    border-color: #3498db;
+    outline: none;
+}
+
+/* Button styles */
+button {
+    display: block;
+    width: 100%;
+    padding: 12px;
+    background-color: #3498db;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    font-size: 18px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+button:hover {
+    background-color: #2980b9;
+    transform: translateY(-2px);
+}
+
+/* Notification Window Styles */
+.notification {
+    max-width: 600px;
+    margin: 25px auto;
+    padding: 25px;
+    border-radius: 8px;
+    text-align: center;
+    font-family: 'Verdana', sans-serif;
+}
+
+.notification.success {
+    background-color: #dff0d8;
+    color: #3c763d;
+    border: 1px solid #d6e9c6;
+}
+
+.notification.error {
+    background-color: #f2dede;
+    color: #a94442;
+    border: 1px solid #ebccd1;
+}
+
+/* Back Button Styles */
+.btn-back {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 12px 25px;
+    background-color: #e74c3c;
+    color: white;
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 1em;
+    transition: background-color 0.3s ease, transform 0.2s;
+}
+
+.btn-back:hover {
+    background-color: #c0392b;
+    transform: translateY(-2px);
+}
+
+/* Unique Decorative Elements */
+.container::before {
+    content: '';
+    position: absolute;
+    top: -30px;
+    left: -30px;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 15px;
+    filter: blur(15px);
+    z-index: -1; /* Place behind the container */
+}
+

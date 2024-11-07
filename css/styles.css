@@ -1,0 +1,254 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Animated Background */
+body {
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-image: url("../image/b3.png"); /* Use url() to include the image */
+    background-size: cover; /* Adjusts the image to cover the entire background */
+    background-position: center; /* Centers the image */
+    overflow: hidden;
+    position: relative;
+}
+
+
+/* Container Styling with Enhanced Glassmorphism Effect */
+.container {
+    max-width: 1200px;
+    width: 100%;
+    min-height: 500px;
+    margin: 0 auto;
+    background: rgba(255, 255, 255, 0.15);
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+    backdrop-filter: blur(10px); /* Frosted glass effect */
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start; /* Aligns content at the top */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    position: relative;
+    padding-bottom: 80px; /* Reserve space for button at bottom */
+}
+
+.container:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.5);
+}
+
+/* Header Styling */
+h1 {
+    text-align: center;
+    color: #ffffff;
+    margin-bottom: 25px;
+    font-size: 2.8rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    text-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+/* Table Styling */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 30px;
+    background: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+table th, table td {
+    padding: 15px;
+    text-align: left;
+    color: #000000;
+    font-weight: 500;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+}
+
+table th {
+    background-color: rgba(255, 255, 255, 0.25);
+    color: #000000;
+}
+
+table tr:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+/* Profile Image */
+img {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-right: 15px;
+    border: 2px solid rgba(255, 255, 255, 0.2);
+}
+
+/* Button Styling with Neon Glow */
+a.btn-edit, a.btn-delete {
+    padding: 10px 20px;
+    border-radius: 12px;
+    color: white;
+    text-decoration: none;
+    margin: 0 8px;
+    display: inline-block;
+    font-weight: bold;
+    font-size: 1rem;
+    letter-spacing: 1px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    text-align: center;
+}
+
+/* Edit Button with Animated Gradient and Glow */
+a.btn-edit {
+    background: linear-gradient(135deg, #002aff, #2301ff);
+    box-shadow: 0 0 15px rgba(106, 130, 251, 0.6), 0 0 30px rgba(106, 130, 251, 0.5), 0 0 45px rgba(34, 0, 255, 0.4);
+    position: relative;
+    overflow: hidden;
+}
+
+a.btn-edit::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 300%;
+    height: 300%;
+    background: linear-gradient(45deg, rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0));
+    transform: translateX(-50%) translateY(-50%) rotate(45deg);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+a.btn-edit:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 0 20px rgba(106, 130, 251, 0.8), 0 0 35px rgba(0, 46, 249, 0.7), 0 0 60px rgba(0, 247, 255, 0.6);
+    background: linear-gradient(135deg, #5b69c9, #00cdf6);
+}
+
+a.btn-edit:hover::before {
+    opacity: 1;
+}
+
+/* Delete Button with Intense Neon Red Glow */
+a.btn-delete {
+    background: linear-gradient(135deg, #e74c3c, #c0392b);
+    box-shadow: 0 0 15px rgba(231, 76, 60, 0.6), 0 0 30px rgba(231, 76, 60, 0.5), 0 0 45px rgba(192, 57, 43, 0.4);
+    position: relative;
+    overflow: hidden;
+}
+
+a.btn-delete::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 300%;
+    height: 300%;
+    background: linear-gradient(45deg, rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0));
+    transform: translateX(-50%) translateY(-50%) rotate(45deg);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+a.btn-delete:hover {
+    transform: translateY(-3px);
+    background: #b03a2e;
+    box-shadow: 0 0 20px rgba(231, 76, 60, 0.8), 0 0 35px rgba(192, 57, 43, 0.7), 0 0 60px rgba(231, 76, 60, 0.6);
+}
+
+a.btn-delete:hover::before {
+    opacity: 1;
+}
+
+
+/* Add User and Logout Buttons with Neon Gradient and Glow */
+
+.create1-user1-btn1 {
+    position: absolute;
+    bottom: 20px; 
+    left: 50%; 
+    transform: translateX(-50%); 
+    padding: 12px 24px;
+    border-radius: 10px;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: bold;
+    color: white;
+    background: linear-gradient(135deg, #28a745, #56db70);
+    box-shadow: 0 0 10px rgba(40, 167, 69, 0.6), 0 0 20px rgba(40, 167, 69, 0.4);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    z-index: 10;
+    width: auto; /* Ensures button is only as wide as needed */
+    height: auto;
+}
+.create1-user1-btn1::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 300%;
+    height: 300%;
+   
+    transform: translate(-50%, -50%);
+    transition: opacity 0.4s ease;
+    opacity: 0;
+}
+.create1-user1-btn1:hover::before {
+    opacity: 1;
+}
+.create1-user1-btn1:hover::after {
+    opacity: 1;
+}
+
+/* Logout Button with Fiery Red Gradient */
+.logout-btn {
+    position: absolute;
+    top: 20px;                /* Positions the button at the top */
+    right: 20px;              /* Aligns it to the right */
+    padding: 12px 24px;
+    border-radius: 10px;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: bold;
+    color: white;
+    background: linear-gradient(135deg, #d9534f, #e57373);
+    box-shadow: 0 0 10px rgba(217, 83, 79, 0.6), 0 0 20px rgba(217, 83, 79, 0.4);
+    z-index: 10;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    overflow: hidden;
+}
+
+.logout-btn::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 300%;
+    height: 300%;
+    background: radial-gradient(circle, rgba(255, 255, 255, 0.2), transparent 60%);
+    transform: translate(-50%, -50%);
+    transition: opacity 0.4s ease;
+    opacity: 0;
+}
+
+.logout-btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 0 15px rgba(217, 83, 79, 0.8), 0 0 30px rgba(217, 83, 79, 0.6);
+}
+
+.logout-btn:hover::before {
+    opacity: 1;
+}

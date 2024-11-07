@@ -1,0 +1,115 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: #1e1e2f;
+    overflow: hidden;
+}
+
+/* Animated Background */
+.animated-bg {
+    position: absolute;
+    width: 200%;
+    height: 200%;
+    background: linear-gradient(135deg, #3a7bd5, #00d2ff, #3a7bd5, #00d2ff);
+    background-size: 200% 200%;
+    z-index: -1;
+    animation: gradient-animation 8s ease infinite;
+}
+
+@keyframes gradient-animation {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+.container {
+    text-align: center;
+    max-width: 800px;
+    padding: 3rem;
+    border-radius: 12px;
+    background: rgba(255, 255, 255, 0.85);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.container:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+}
+
+header h1 {
+    font-size: 2.5rem;
+    color: #333333;
+    margin-bottom: 0.5rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+header h2, header h3 {
+    font-size: 1.2rem;
+    color: #555555;
+    margin: 0.3rem 0;
+}
+
+.highlight {
+    color: #007bff;
+    font-weight: bold;
+}
+
+.description {
+    font-size: 1rem;
+    color: #444444;
+    margin: 1.5rem 0;
+    line-height: 1.6;
+    text-align: justify;
+}
+
+/* Button with Neon Glow Effect */
+.get-started-btn {
+    display: inline-block;
+    padding: 0.8rem 2.5rem;
+    color: #ffffff;
+    background-color: #007bff;
+    text-decoration: none;
+    font-size: 1rem;
+    font-weight: bold;
+    border-radius: 30px;
+    box-shadow: 0 4px 15px rgba(0, 123, 255, 0.4), 0 0 15px rgba(0, 123, 255, 0.5);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.get-started-btn:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 300%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.2);
+    transform: skewX(-30deg);
+    transition: left 0.4s ease;
+}
+
+.get-started-btn:hover:before {
+    left: 100%;
+}
+
+.get-started-btn:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 6px 25px rgba(0, 123, 255, 0.6), 0 0 20px rgba(0, 123, 255, 0.7);
+}
+
+.get-started-btn:active {
+    transform: translateY(2px);
+}
